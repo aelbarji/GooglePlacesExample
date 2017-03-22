@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GooglePlacesExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qI-pf-VLK">
+                                <rect key="frame" x="123" y="360.5" width="129" height="30"/>
+                                <state key="normal" title="Récupérer adresse"/>
+                                <connections>
+                                    <action selector="onLaunchClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnp-qJ-lWq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du lieu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhg-kW-RXC">
+                                <rect key="frame" x="87" y="200" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="uuo-Vp-GdV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.46620205044746399" green="0.15637357532978058" blue="0.6434749960899353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.19376453757286072" green="0.50850099325180054" blue="0.85232251882553101" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse à sélectionner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-LW-4Hk">
+                                <rect key="frame" x="87" y="263.5" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XNS-yR-ap3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.46620205040000001" green="0.15637357530000001" blue="0.64347499610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTG-EL-Zwd">
+                                <rect key="frame" x="23" y="200" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LF-hv-MFC">
+                                <rect key="frame" x="20" y="273.5" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwN-cZ-xid">
+                                <rect key="frame" x="82" y="420.5" width="210" height="30"/>
+                                <state key="normal" title="Sélectionner un lieu sur la map"/>
+                                <connections>
+                                    <action selector="pickPlace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PkE-2n-qHP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nwN-cZ-xid" firstAttribute="top" secondItem="7qI-pf-VLK" secondAttribute="bottom" constant="30" id="0os-bS-N57"/>
+                            <constraint firstItem="eTG-EL-Zwd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="9KL-Q9-rgB"/>
+                            <constraint firstItem="6LF-hv-MFC" firstAttribute="centerY" secondItem="Jcx-LW-4Hk" secondAttribute="centerY" id="EKh-Yg-9aM"/>
+                            <constraint firstItem="uhg-kW-RXC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EwJ-hx-7aW"/>
+                            <constraint firstItem="Jcx-LW-4Hk" firstAttribute="width" secondItem="uhg-kW-RXC" secondAttribute="width" id="HTO-Vb-MeQ"/>
+                            <constraint firstItem="Jcx-LW-4Hk" firstAttribute="top" secondItem="uhg-kW-RXC" secondAttribute="bottom" constant="43" id="I8H-No-ae2"/>
+                            <constraint firstItem="7qI-pf-VLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="McI-jg-aIa"/>
+                            <constraint firstItem="eTG-EL-Zwd" firstAttribute="centerY" secondItem="uhg-kW-RXC" secondAttribute="centerY" id="ShN-Vj-XUe"/>
+                            <constraint firstItem="nwN-cZ-xid" firstAttribute="centerX" secondItem="7qI-pf-VLK" secondAttribute="centerX" id="eqX-96-wxo"/>
+                            <constraint firstItem="Jcx-LW-4Hk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jwA-qw-G79"/>
+                            <constraint firstItem="6LF-hv-MFC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="k6b-fO-dJT"/>
+                            <constraint firstItem="uhg-kW-RXC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="o9w-Wf-K8H"/>
+                            <constraint firstItem="7qI-pf-VLK" firstAttribute="top" secondItem="Jcx-LW-4Hk" secondAttribute="bottom" constant="57" id="ugL-w9-uDd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="placeAddressLabel" destination="Jcx-LW-4Hk" id="y6R-Pc-izZ"/>
+                        <outlet property="placeNameLabel" destination="uhg-kW-RXC" id="A0v-8u-EHi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
